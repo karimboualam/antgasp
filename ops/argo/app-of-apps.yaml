@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: antgasp
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/<ton-org>/<ton-repo>.git
+    targetRevision: main
+    path: ops/helm
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: antgasp
+  syncPolicy:
+    automated: { prune: true, selfHeal: true }
+    syncOptions: ["CreateNamespace=true"]

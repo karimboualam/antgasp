@@ -1,0 +1,3 @@
+-- Exemple d'utilisateur applicatif (si besoin).
+-- CREATE USER antgasp WITH PASSWORD 'antgasp' CREATEDB;
+-- GRANT ALL PRIVILEGES ON DATABASE antgasp TO antgasp;

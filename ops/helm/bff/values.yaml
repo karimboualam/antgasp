@@ -1,0 +1,13 @@
+image:
+  repository: ghcr.io/your-org/antgasp-bff
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env:
+  PORT: "4000"
+  PRODUCTS_API: "http://products:8080"
+  CORS_ORIGINS: "http://localhost:5173"
+
+service:
+  type: ClusterIP
+  port: 80

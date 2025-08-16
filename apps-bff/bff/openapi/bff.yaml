@@ -1,0 +1,40 @@
+openapi: 3.0.3
+info:
+  title: Ant-Gasp BFF
+  version: 0.1.0
+servers: [{ url: http://localhost:4000 }]
+paths:
+  /offers:
+    get:
+      summary: List offers
+      parameters:
+        - in: query
+          name: city
+          schema: { type: string }
+        - in: query
+          name: q
+          schema: { type: string }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ListOffersResponse" }
+components:
+  schemas:
+    Offer:
+      type: object
+      required: [id, title, price, merchantName, city, imageUrl]
+      properties:
+        id: { type: string, format: uuid }
+        title: { type: string }
+        price: { type: number }
+        merchantName: { type: string }
+        city: { type: string }
+        imageUrl: { type: string }
+    ListOffersResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items: { $ref: "#/components/schemas/Offer" }

@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "ReservationCreated",
+  "namespace": "com.antgasp.events",
+  "fields": [
+    { "name": "reservationId", "type": "string" },
+    { "name": "offerId", "type": "string" },
+    { "name": "userEmail", "type": "string" },
+    { "name": "ts", "type": "long" }
+  ]
+}

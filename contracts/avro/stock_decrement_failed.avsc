@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "StockDecrementFailed",
+  "namespace": "com.antgasp.events",
+  "fields": [
+    { "name": "productId", "type": "string" },
+    { "name": "reason", "type": "string" },
+    { "name": "ts", "type": "long" }
+  ]
+}

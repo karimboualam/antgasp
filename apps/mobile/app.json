@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Ant-Gasp",
+    "slug": "ant-gasp",
+    "scheme": "antgasp",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic"
+  }
+}

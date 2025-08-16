@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "ReservationConfirmed",
+  "namespace": "com.antgasp.events",
+  "fields": [
+    { "name": "reservationId", "type": "string" },
+    { "name": "paymentId", "type": "string" },
+    { "name": "ts", "type": "long" }
+  ]
+}
